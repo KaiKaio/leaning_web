@@ -22,6 +22,10 @@ module.exports = {
         use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: ["babel-loader"],
@@ -45,6 +49,14 @@ module.exports = {
         test: /\.html$/,
         // 处理 Html文件的 Img标签（负责引入图片，从而能被 Url_Loader进行处理）
         loader: 'html-loader'
+      },
+      {
+        // 打包其他资源(除了 Html / Js / Css以外的资源)
+        exclude: /\.(js|html|scss|css)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[hash:10].[ext]'
+        }
       }
     ],
   },

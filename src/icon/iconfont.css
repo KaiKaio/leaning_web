@@ -1,0 +1,29 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1597143266802'); /* IE9 */
+  src: url('iconfont.eot?t=1597143266802#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAQoAAsAAAAACIgAAAPZAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDFAqETIN/ATYCJAMQCwoABCAFhG0HRxtoBxHVm13Jfg647TDrJDmuWEFtup689ehJnpTMzLzB87Q/+nNn7ns7Dysg7n4pkYnMMBsbEY0IJ7UfAAN6GpRMO4HJJF/t/FKXeYH4iHOnNud6YKOiXo7kW/ToC0nbUXZZnv7nmOny+cDyr9IlO2hvgOMBDSjqOunI7oAOEM/5VMCzGegO+v0wBAgpogHp4+wZCDgU75AAMistJQ5wNSs6ghOcwe+5UJGteDizztwDtqQ/L99oEwcGz+KdOHiKUyLQ4+Phl1546f+y8TEC2XZuQLkMLNAAKMjkXu9YbJ5twBJa/EoT4KOd5uORl97//y0lqRWu+Q/PAQbBgvh42hjYDo19VbKQBQMfj7Ag8PGkFQu07ndAAJyHf2Qs2OalBs2M47w8enausIDfXMYLbKpAglvKBYLWSn5QSLQ+9PrlqKsXIy+eDb98PiITV8UQYc3CkQnw+AvnigPtyWvGjyh3n5UsHdNo1tXZCl3lpcapa2q6bFKdlzi6PrwFGZ5OGNhW2dUMdCJtWx48cs0QVW/J4zUhw3sVO+o7WxCkpTX4+GW04bnXJfrVm5ClK8r6Z9ad6muuOsgQIdSEXL0AOrC9fPhrGKNjJ4+iG8bHG9M6rqA01NNzdg6j920TQd3HIVKJZDFGyhLDGvjqVRiqzaIYSvFGwJdNHDtJ0iD3XNWX1NnSWeyXqnnyX0CS7M5hc2++//hVNQn0TEryADX7K3Z0uCpqeIBJSaCnUnWaEqxTeCnfWmZGFwNvzvrIxwBWrqTiU69CU8UvA4QBHpJv7VH7hzUtjTO2DeWOneiCMW1CpkWhNupWaqBlSC1jyaqrHA0bywyVjd4r7acwemKuq+2048Z5zM0BpT/OqkkUteq1meq2cjAXao0OOyLm4T3KDoZOAGwPqBPAzoLK/v/foXjfz2YM0/q3ixSAt6PbH1KrsiznMMCW/dsy5pTaCs+maipDqeNTRlTKMEDo2+BfbgZI48MW+kx2PQiOzBIMCRSCxVGBVGwDeER0gI+jO4TU0//yiHQWYBENgDpWEQgpnANDEjfAksJ9pGLfg0cWP8AnRSyEjBTuDSPgvaTdUdAoerB/SI57Chy6yxpvGN6tkaoixb9QxpSAMiuahSv2KFucMn5CpUpAwh1c6HHYtgyDcI1Os6g6HPKc+r4oc9xNdhwFjaIH7B9IjnuK5+uu9f03DO/WyMhES/iFMqblgZKMgoG8anvWxKt8ZvyEClUCSLgDLuTG1s8yMPRvq9FpRlyQHg7kwiziarPj9d03vACEeKeoGLGi4rFdiO2rFL+F+M5xW1QuvonSZAIAAAA=') format('woff2'),
+  url('iconfont.woff?t=1597143266802') format('woff'),
+  url('iconfont.ttf?t=1597143266802') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1597143266802#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-selection:before {
+  content: "\e69f";
+}
+
+.icon-collection:before {
+  content: "\e69e";
+}
+
+.icon-wifi:before {
+  content: "\e6a4";
+}
+
