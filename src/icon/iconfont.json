@@ -1,0 +1,30 @@
+{
+  "id": "2000502",
+  "name": "Webpack",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "8106248",
+      "name": "selection",
+      "font_class": "selection",
+      "unicode": "e69f",
+      "unicode_decimal": 59039
+    },
+    {
+      "icon_id": "8106258",
+      "name": "collection",
+      "font_class": "collection",
+      "unicode": "e69e",
+      "unicode_decimal": 59038
+    },
+    {
+      "icon_id": "8106293",
+      "name": "wifi",
+      "font_class": "wifi",
+      "unicode": "e6a4",
+      "unicode_decimal": 59044
+    }
+  ]
+}
