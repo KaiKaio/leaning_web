@@ -1,10 +1,3 @@
-/*
-  webpack.config.js ( Webpack的配置文件 )
-  
-  作用: 指示 Webpack 干哪些事情（当运行 Webpack 指令时，会加载里面的配置）
-
-  所有构建工具都是基于Nodejs平台运行的 - 模块化默认采用Commonjs
-*/
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { resolve } = require("path"); // resolve用来拼接绝对路径的方法
 
@@ -13,6 +6,7 @@ module.exports = {
     index: resolve(__dirname, "src", "index.js"),
   },
   output: {
+    filename: 'js/built.js',
     path: resolve(__dirname, "dist"),
   },
   module: {
@@ -42,7 +36,8 @@ module.exports = {
           // 重命名 - 图片
           // [hash:10] 取图片的hash的前10位
           // [ext] 取文件原来扩展名
-          name: '[hash:10].[ext]'
+          name: '[hash:10].[ext]',
+          outputPath: 'imgs'
         }
       },
       {
@@ -52,10 +47,11 @@ module.exports = {
       },
       {
         // 打包其他资源(除了 Html / Js / Css以外的资源)
-        exclude: /\.(js|html|scss|css)$/,
+        exclude: /\.(js|html|scss|css|jpg|png|gif)$/,
         loader: 'file-loader',
         options: {
-          name: '[hash:10].[ext]'
+          name: '[hash:10].[ext]',
+          outputPath: 'media'
         }
       }
     ],
@@ -66,6 +62,13 @@ module.exports = {
       template: resolve(__dirname, "src", "index.html"),
     }),
   ],
-  mode: 'development'
-  // mode: 'production'
+  mode: 'development',
+  // mode: 'production,'
+  
+  devServer: {
+    // 项目构建后路径
+    contentBase: resolve(__dirname, 'build'),
+    compress: true,
+    port: 3000
+  }
 };

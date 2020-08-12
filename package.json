@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode development",
-    "dev": "webpack-dev-server --mode development --open"
+    "dev": "npx webpack-dev-server"
   },
   "author": "kaikai",
   "license": "ISC",
@@ -17,6 +17,7 @@
     "file-loader": "^6.0.0",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.10.0",
     "sass": "^1.26.10",
     "sass-loader": "^9.0.3",
     "style-loader": "^1.2.1",
