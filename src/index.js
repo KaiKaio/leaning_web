@@ -11,3 +11,5 @@ const fancyFunc = () => {
 };
 
 const [a, b] = fancyFunc();
+
+console.log(7)
