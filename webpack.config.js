@@ -64,7 +64,40 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ["babel-loader"],
+        loader: 'babel-loader',
+        options: {
+          presets: [
+            [
+              '@babel/preset-env',
+              {
+                // 按需加载
+                useBuiltIns: 'usage',
+                corejs: {
+                  version: 3
+                },
+                targets: {
+                  chrome: '60',
+                  firefox: '60',
+                  ie: '9',
+                  safari: '10',
+                  edge: '17'
+                }
+              }
+            ]
+          ]
+        }
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
+        options: {
+          // 自动修复eslint的错误
+          fix: true,
+          globals: [
+            "document"
+          ]
+        }
       },
       {
         test: /\.(jpg|png|gif)$/,
@@ -102,6 +135,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       // 功能：默认会创建一个空的HTML，自动引入打包输出的所有资源（JS/CSS）
       template: resolve(__dirname, "src", "index.html"),
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true
+      }
     }),
     new MiniCssExtractPlugin({
       // 对输出的Css文件进行重命名
@@ -109,9 +146,7 @@ module.exports = {
     }),
     new OptimizeCssAssetsWebpackPlugin()
   ],
-  mode: "development",
-  // mode: 'production,'
-
+  mode: 'production',
   devServer: {
     // 项目构建后路径
     contentBase: resolve(__dirname, "build"),
