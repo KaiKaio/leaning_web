@@ -4,16 +4,27 @@ $primary-color: #3e6f9e;
 body {
   font-family: $font;
   color: $primary-color;
-  .img{
-    width: 100px;
-    height: 100px;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    &#img1{
-      background-image: url('./img/1.jpg');
+  .img-wrapper {
+    display: flex;
+    .img{
+      width: 100px;
+      height: 100px;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      &#img1{
+        background-image: url('./img/1.jpg');
+      }
+      &#img2{
+        background-image: url('./img/2.png');
+      }
     }
-    &#img2{
-      background-image: url('./img/2.png');
+    > img {
+      width: 100px;
+      height: 100px;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      transform: rotate(30deg);
+      backface-visibility: hidden;
     }
   }
 }
